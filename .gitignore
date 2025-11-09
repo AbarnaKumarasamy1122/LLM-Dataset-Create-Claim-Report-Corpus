@@ -1,0 +1,121 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+venv*/
+.venv/
+build/
+dist/
+downloads/
+eggs/
+.eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+coverage.xml
+*.cover
+*.coverage
+
+# Virtualenvs and environments
+ENV/
+env.bak/
+venv.bak/
+.env
+.env.*
+.python-version
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# Jupyter / IPython
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# mypy, pip, pytest caches
+.mypy_cache/
+.dmypy.json
+pip-wheel-metadata/
+*.egg-info/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite3
+*.sqlite
+*.db
+
+# macOS / Windows artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup and temp files
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Coverage / reports
+coverage/
+htmlcov/
+
+# Secrets and credentials
+credentials/
+secrets/
+*.pem
+*.key
+*.crt
+
+# Large dataset/artifact folders (images, models, exports)
+# Ignore image folders (train/val/test) under llm_dataset/data/images
+llm_dataset/data/images/
+llm_dataset/data/**/images/
+# Common model/output directories
+models/
+checkpoints/
+outputs/
+artifacts/
+*.ckpt
+*.pt
+*.pth
+
+# Optional: ignore large archives and caches
+*.zip
+*.tar.gz
+*.tgz
+
+# Node/npm (if present)
+node_modules/
+npm-debug.log
+yarn-error.log

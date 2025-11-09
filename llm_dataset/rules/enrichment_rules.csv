@@ -1,0 +1,8 @@
+damage_type,shipment_stage,likely_cause,liability,base_cost
+wet,transit,exposure to moisture (improper sealing),Carrier,500
+crushed,warehouse,overstacking / heavy pressure,Warehouse,1200
+dent,transit,impact during handling,Carrier,800
+scratch,handling,abrasion from conveyor,Vendor,200
+torn_tape,warehouse,poor sealing at packing,Vendor,300
+none,*,no visible damage,None,0
+other_damage,*,unknown,Unknown,400

@@ -1,0 +1,27 @@
+templates:
+  - name: concise
+    type: damaged
+    text: "Package {shipment_id} (Image: {image_id}) shows {severity} {damage_type} affecting approximately {damage_area_pct}% of surface. Likely cause: {likely_cause}. Liability: {liability}. Estimated cost: ₹{estimated_cost}. Recommended action: {action}."
+
+  - name: formal
+    type: damaged
+    text: |
+      Claim Report — Shipment: {shipment_id}
+      Inspection Date: {timestamp}
+      Summary: The package exhibits {damage_type} damage (severity: {severity}) affecting approximately {damage_area_pct}% of the package surface. Cause: {likely_cause}. Preliminary estimated loss: ₹{estimated_cost}. Recommend: {action}. Assigned liability: {liability}.
+
+  - name: bullet
+    type: damaged
+    text: |
+      - Shipment: {shipment_id}
+      - Image: {image_id}
+      - Damage: {damage_type} ({severity})
+      - Area affected: {damage_area_pct}%
+      - Cause: {likely_cause}
+      - Estimated loss: ₹{estimated_cost}
+      - Action: {action}
+      - Liability: {liability}
+
+  - name: no_damage
+    type: no_damage
+    text: "Inspection for shipment {shipment_id} (Image: {image_id}) shows no visible damage (confidence: {confidence}). No action required."
