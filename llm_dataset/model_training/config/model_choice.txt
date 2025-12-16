@@ -1,0 +1,89 @@
+Model Selection: google/flan-t5-base
+
+Reasoning:
+==========
+
+1. Model Characteristics:
+   - Size: 250M parameters
+   - Type: Sequence-to-sequence (encoder-decoder)
+   - Training: Instruction-tuned on diverse tasks
+
+2. Why FLAN-T5-base for Claim Report Generation:
+   
+   ✅ Perfect for Seq2Seq Tasks:
+      - Our task is structured input → natural language output
+      - FLAN-T5 excels at following instructions and generating coherent text
+   
+   ✅ Resource Efficiency:
+      - Requires 12-16 GB GPU (or 8-10 GB with LoRA)
+      - Training time: 2-4 hours for 3 epochs
+      - Can run on Google Colab Pro or modest local GPU
+   
+   ✅ Pre-trained on Instructions:
+      - Already understands task-based prompts
+      - Fine-tuning will adapt it to claim report format
+      - Less data needed compared to base models
+   
+   ✅ Production Ready:
+      - Stable and well-documented
+      - Active community support
+      - Easy integration with Hugging Face ecosystem
+   
+   ✅ Quality vs. Cost:
+      - Better quality than FLAN-T5-small
+      - More practical than larger models (Mistral/Llama)
+      - Optimal for MVP and production deployment
+
+3. Dataset Compatibility:
+   - Our dataset: 6,612 examples, ~69 tokens/example
+   - FLAN-T5-base: 512 token context window
+   - Perfect fit: avg 31 input + 38 output = 69 tokens << 512
+
+4. Alternative Models (Not Selected):
+   
+   ❌ FLAN-T5-small (80M):
+      - Too small, may produce lower quality outputs
+      - Use only if GPU severely limited (<6GB)
+   
+   ❌ FLAN-T5-large (780M):
+      - Overkill for this task
+      - 3x training time, 2x GPU memory
+      - Marginal quality improvement
+   
+   ❌ Mistral-7B:
+      - Requires 32+ GB GPU
+      - 3-4x longer training time
+      - Decoder-only (better for chat, not structured output)
+   
+   ❌ Llama-3-8B:
+      - Requires 40+ GB GPU
+      - Access restrictions (gated model)
+      - Decoder-only architecture
+
+5. Training Strategy:
+   - Use LoRA (Low-Rank Adaptation) for memory efficiency
+   - Parameters: r=8, alpha=32
+   - Target modules: ["q", "v"] (attention layers)
+   - Expected GPU: 8-10 GB with LoRA
+
+6. Expected Performance:
+   - BLEU Score: 40-60 (good for this task)
+   - ROUGE-L: 50-70
+   - Training convergence: 2-3 epochs
+   - Inference speed: ~50-100 examples/second
+
+Decision Date: November 27, 2025
+Selected by: AI Assistant (based on task requirements and resource constraints)
+
+Model URL: https://huggingface.co/google/flan-t5-base
+Documentation: https://huggingface.co/docs/transformers/model_doc/flan-t5
+
+Next Steps:
+-----------
+1. Install required packages (transformers, peft, accelerate)
+2. Load model and tokenizer
+3. Prepare datasets with tokenization
+4. Configure LoRA and training arguments
+5. Start training (3 epochs, ~2-4 hours)
+6. Evaluate on test set
+7. Save fine-tuned model

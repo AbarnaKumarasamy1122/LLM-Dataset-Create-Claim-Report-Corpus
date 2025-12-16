@@ -1,0 +1,5 @@
+{"shipment_id": "SHP-TEST-001", "damage_type": "dent", "severity": "high", "vendor": "FastShip Logistics", "shipment_stage": "transit"}
+{"shipment_id": "SHP-TEST-002", "damage_type": "wet", "severity": "medium", "vendor": "PolyChem Co", "shipment_stage": "warehouse"}
+{"shipment_id": "SHP-TEST-003", "damage_type": "crushed", "severity": "low", "vendor": "GlobalPack Ltd", "shipment_stage": "delivered"}
+{"shipment_id": "SHP-TEST-004", "damage_type": "scratch", "severity": "medium", "vendor": "TransMover Inc", "shipment_stage": "handling"}
+{"shipment_id": "SHP-TEST-005", "damage_type": "torn_tape", "severity": "low", "vendor": "VendorA", "shipment_stage": "warehouse"}

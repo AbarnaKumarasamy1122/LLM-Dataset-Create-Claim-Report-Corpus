@@ -1,0 +1,17 @@
+
+============================================================
+DATA PREPARATION SUMMARY
+============================================================
+
+Total entries processed: 6612
+Total valid entries: 6612
+Total invalid entries: 0
+Total duplicates removed: 0
+
+Dataset Breakdown:
+  Training:   5,289 entries
+  Validation: 661 entries
+  Test:       662 entries
+
+✅ All datasets are ready for fine-tuning!
+============================================================

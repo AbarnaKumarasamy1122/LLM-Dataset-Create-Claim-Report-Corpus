@@ -1,0 +1,8 @@
+{
+  "shipment_id": "SHP-TEST-001",
+  "damage_type": "dent",
+  "severity": "high",
+  "image_id": "test_image_001.png",
+  "vendor": "FastShip Logistics",
+  "shipment_stage": "transit"
+}
